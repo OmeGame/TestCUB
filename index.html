@@ -11,7 +11,7 @@
 			CUB.maxExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));*/
 			new CUB.Layer.Background('Mon arrière-plan', CUB.Layer.Background.layerType.OPENSTREETMAP);
 			var commune = new CUB.Layer.Static('Commune','http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', 'FV_COMMU_S');
-			var park = new CUB.Layer.Static('parking', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P', 'TB_STVEL_P', 'CI_PARK_P']);
+			var park = new CUB.Layer.Static('parking', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P']);
 			var Run = new CUB.Layer.Dynamic('Tram', "https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", 'SV_VEHICLE_SV');
 			var Circ = new CUB.Layer.Dynamic('Circulation',"https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", { 
 				layerName: 'SV_VEHICLE_SV',
