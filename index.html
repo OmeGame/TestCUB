@@ -6,18 +6,22 @@
 	<script type="text/javascript">
 		CUB.ready(function() {
 			CUB.init('zone_carte');
-			var dynamique = new CUB.Layer.Dynamic('TBM', 'http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ', { 
-				layerName: 'sv_vehic_p',
+			/*CUB.moveToExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));
+			CUB.maxExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));*/
+			new CUB.Layer.Background('Mon arrière-plan', CUB.Layer.Background.layerType.OPENSTREETMAP);
+			var statique = new CUB.Layer.Static('Ma couche statique', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', 'FV_COMMU_S');
+			var dynamique = new CUB.Layer.Dynamic('TBM', "https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", { 
+				layerName: 'SV_VEHICLE_SV',
 				selectable: true
 				});
-			var dynamique2 = new CUB.Layer.Dynamic('Arrets','https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', {
-				layerName: 'sv_arret_p',
+			var dynamique2 = new CUB.Layer.Dynamic('Arrets',"https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", {
+				layerName: 'TB_CHEM_L',
 				selectable: true
 			});
 		})
 	</script>
 	</head>
 	<body>
-		<div id="zone_carte" style="width: 256px; height: 256px; border: 1px solid black"></div>
+		<div id="zone_carte" style="width: 512px; height: 512px; border: 1px solid black"></div>
 	</body>
 </html>
