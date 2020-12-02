@@ -17,7 +17,7 @@
 				layerName: 'SV_VEHICLE_SV',
 				selectable: true
 				});
-			var stops = new CUB.Layer.Dynamic('Arrets',"https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", {
+			var stops = new CUB.Layer.Dynamic('Arrets',"http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:SVV_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000", {
 				layerName: 'TB_CHEM_L',
 				selectable: true
 			});
