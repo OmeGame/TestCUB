@@ -4,17 +4,20 @@
 		<title>Carte simple - API CUB</title>
         <script type="text/javascript" src="http://data.bordeaux-metropole.fr/api/cub.xjs?key=268HITVXYZ"></script>
 	<script type="text/javascript">
+
 		CUB.ready(function() {
 			CUB.init('zone_carte');
 			/*CUB.moveToExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));
 			CUB.maxExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));*/
 			new CUB.Layer.Background('Mon arrière-plan', CUB.Layer.Background.layerType.OPENSTREETMAP);
-			var statique = new CUB.Layer.Static('Ma couche statique', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', 'FV_COMMU_S');
-			var dynamique = new CUB.Layer.Dynamic('TBM', "https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", { 
+			var commune = new CUB.Layer.Static('Commune','http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', 'FV_COMMU_S');
+			var park = new CUB.Layer.Static('parking', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P', 'TB_STVEL_P', 'CI_PARK_P']);
+			var Run = new CUB.Layer.Dynamic('Tram', "https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", 'SV_VEHICLE_SV');
+			var Circ = new CUB.Layer.Dynamic('Circulation',"https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", { 
 				layerName: 'SV_VEHICLE_SV',
 				selectable: true
 				});
-			var dynamique2 = new CUB.Layer.Dynamic('Arrets',"https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", {
+			var stops = new CUB.Layer.Dynamic('Arrets',"https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ", {
 				layerName: 'TB_CHEM_L',
 				selectable: true
 			});
