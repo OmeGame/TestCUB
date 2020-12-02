@@ -2,15 +2,15 @@
 <html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Carte simple - API CUB</title>
-        <script type="text/javascript" src="http://data.bordeaux-metropole.fr/api/cub.xjs?key=ABCDE01234"></script>
+        <script type="text/javascript" src="http://data.bordeaux-metropole.fr/api/cub.xjs?key=268HITVXYZ"></script>
 	<script type="text/javascript">
 		CUB.ready(function() {
 			CUB.init('zone_carte');
-			var dynamique = new CUB.Layer.Dynamic('TBM', 'http://data.bordeaux-metropole.fr/wfs?key=ABCDE01234', { 
+			var dynamique = new CUB.Layer.Dynamic('TBM', 'http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ', { 
 				layerName: 'sv_vehic_p',
 				selectable: true
 				});
-			var dynamique2 = new CUB.Layer.Dynamic('Arrets','https://data.bordeaux-metropole.fr/wms?key=[VOTRECLE]', {
+			var dynamique2 = new CUB.Layer.Dynamic('Arrets','https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', {
 				layerName: 'sv_arret_p',
 				selectable: true
 			});
