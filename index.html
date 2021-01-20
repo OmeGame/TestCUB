@@ -19,6 +19,7 @@
 				selectable: true
 			});
 			var dynamique = new CUB.Layer.Dynamic('Ma couche dynamique', 'http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ', { layerName: 'TB_STVEL_P' });
+			var statique = new CUB.Layer.Static('Ma couche statique', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P', 'TB_STVEL_P', 'CI_PARK_P']);
 		})
 	</script>
 	</head>
