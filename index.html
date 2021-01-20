@@ -18,7 +18,9 @@
 			var stops = new CUB.Layer.Dynamic('Arrets',"http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:SVV_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000", {
 				selectable: true
 			});
-			var dynamique = new CUB.Layer.Dynamic('Ma couche dynamique', 'http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:TB_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000);
+			var dynamique = new CUB.Layer.Dynamic('Ma couche dynamique', 'http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:TB_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000), {
+				selectable: true
+			});
 			var statique = new CUB.Layer.Static('Ma couche statique', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P', 'TB_STVEL_P', 'CI_PARK_P']);
 		})
 	</script>
