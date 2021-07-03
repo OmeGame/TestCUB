@@ -2,7 +2,7 @@
 <html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Carte simple - API CUB</title>
-        <script type="text/javascript" src="http://data.bordeaux-metropole.fr/api/cub.xjs?key=268HITVXYZ"></script>
+        <script type="text/javascript" src="https://data.bordeaux-metropole.fr/api/cub.xjs?key=268HITVXYZ"></script>
 	<script type="text/javascript">
 
 		CUB.ready(function() {
@@ -10,16 +10,16 @@
 			/*CUB.moveToExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));
 			CUB.maxExtent(new CUB.Extent(1411750, 4185585, 1420575, 4192045));*/
 			new CUB.Layer.Background('Mon arrière-plan', CUB.Layer.Background.layerType.OPENSTREETMAP);
-			var commune = new CUB.Layer.Static('Commune','http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', 'FV_COMMU_S');
-			var park = new CUB.Layer.Static('parking', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ','TB_PARCR_P');
-			var Circ = new CUB.Layer.Dynamic('Circulation',"http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:SV_VEHIC_P&SRSNAME=EPSG:3945&MAXFEATURES=1000",{
+			var commune = new CUB.Layer.Static('Commune','https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', 'FV_COMMU_S');
+			var park = new CUB.Layer.Static('parking', 'https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ','TB_PARCR_P');
+			var Circ = new CUB.Layer.Dynamic('Circulation',"https://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:SV_VEHIC_P&SRSNAME=EPSG:3945&MAXFEATURES=1000",{
 				/*layerName:'SV_VEHIC_P'*/
 				selectable: true});
 			var stops = new CUB.Layer.Dynamic('Arrets',"http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:SVV_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000", {
 				selectable: true
 			});
-			var dynamique = new CUB.Layer.Dynamic('Ma couche dynamique', 'http://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:TB_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000)');
-			var statique = new CUB.Layer.Static('Ma couche statique', 'http://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P', 'TB_STVEL_P', 'CI_PARK_P']);
+			var dynamique = new CUB.Layer.Dynamic('Ma couche dynamique', 'https://data.bordeaux-metropole.fr/wfs?key=268HITVXYZ&REQUEST=GetFeature&SERVICE=WFS&VERSION=1.1.0&TYPENAME=bm:TB_ARRET_P&SRSNAME=EPSG:3945&MAXFEATURES=1000)');
+			var statique = new CUB.Layer.Static('Ma couche statique', 'https://data.bordeaux-metropole.fr/wms?key=268HITVXYZ', ['TB_PARCR_P', 'TB_STVEL_P', 'CI_PARK_P']);
 		})
 	</script>
 	</head>
